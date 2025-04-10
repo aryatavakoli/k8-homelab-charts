@@ -45,5 +45,5 @@ stringData:
 
 Then Run
 ```
-cat argocd/apps/bootstrap/manifests/cert-manager/cloudflare-api-token-secret.yaml | kubeseal --cert kubeseal.pem --format yaml > argocd/apps/bootstrap/manifests/cloudflare-api-token-sealed.yaml 
+cat argocd/apps/bootstrap/manifests/cert-manager/cloudflare-api-token-secret.yaml | kubeseal --cert kubeseal.pem --format yaml > argocd/apps/bootstrap/manifests/cert-manager/cloudflare-api-token-sealed.yaml 
 ```
