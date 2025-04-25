@@ -6,3 +6,15 @@ env:
       secretKeyRef:
         name: cloudflare-api-token
         key: api-token
+sources:
+  - service
+  - ingress
+  - gateway-httproute
+  - gateway-tlsroute
+  - gateway-tcproute
+  - gateway-udproute
+rbac:
+  additionalPermissions:
+    - apiGroups: ["gateway.networking.k8s.io"]
+      resources: ["gateways","httproutes","tlsroutes","tcproutes","udproutes"] 
+      verbs: ["get","watch","list"]
