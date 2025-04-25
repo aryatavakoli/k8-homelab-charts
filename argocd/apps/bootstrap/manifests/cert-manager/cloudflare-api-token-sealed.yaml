@@ -7,14 +7,14 @@ metadata:
   namespace: cert-manager
 spec:
   encryptedData:
-    api-token: AgCHJepN9SPT4QbKLTDy2Zd0EJ9R1kG1Reswt2cRM/nwwyWCYcX7ijrA33oo/nGy13Yzi4Xm1qjI8uU322vfM5Hef17E/IKp2HP7sG8BqaP2gzuhrcN3IByyII8kaBfCCUnRFFJDKTKU5rANDipZhiyVISvJ9kKqun4RQPaX07MpHDbwDW8kaNJe79evBzjiDcAHjdo5tKC14cXfV2WnqU9GZqCA8ExNmZue2Qzx0A7/s1Xt6J3ajzENSApWlITUzCVUMLhyC/x8g3ohxLbY6eLgH+Z7AkNc9uGvvZH3eblmYo8BmDhpwKkY06Eyp5WKex0o2m8zCBKoDvAGxfbBBflqnU+W1d9ze9P3uBaVBIrvjth2eyk+Qy9RXTUFCen+xHRnc6nGTqNa7/1UOSy/zgOJslq3RpppQIZBFzNmKkmzxaL/HhyrDDR5mLD6meyPQjQ94ejttHdLUul3E4QczTfqzfEmaUolu72vP4c8TDIg84Ak1JGQFxHNoEiA6h8s4N73T2x44A4J37VrT7ASoyp/PufCxUVwqhW87PhyFqoHAxzhYf09pzZ+TPdydRUXbuLnqQwBCZIfD90zRLySXm6Wuia1kGStDkYa4tgu/8qunoyTgZqs4laPsEIYQy67fomcrUrtiWgdzvQMK3qc1Xn4kH2m1TH39kiiND/Pkc+auoOEguaNvcerdXZTy9d1krRPt3dd9Fmty4H3rFO8yrh94+UjEyS14lq1ON4rIN/y6XM/Os9/nWd5
+    api-token: AgBhWidYRYXm61FFB+OEcIhL2A7hQjB72F9YFPi0uGm+T1aVcVROHaJBowYKts63mb4zwEMJ6/KGLvP4RhkaBJn1MrmUN4jN33rbFYqSmkFZuhaa8GWcxmSdcjbiWQQxtTyu22STNhp2Wgql6XFD7ogMZyihDVC+7oa/X2hexz0SaAzUvYFOt6iwoyI5xGWFHm0vrym28swPTDrZxHkZ3dsSpeO8KfCIU6pnyApoPkt5y/7EDaKEQA22FiUxnk25U9WQ9XHCyA5c61Sl4u6kZVBt4+5rew9Yhv/3zdt12cXILCk48WJpKDyrSEqYEwWb1JwAv2ToicwQy+pya5p+Ud/36oCqXlkqH99+ibBfqBToD9JqHscawAYEj8Di3SeXMP9hQKdhtQnfjbViqqrEPS+xjsDf+kU16B3HuH9f3BCV0vbfrf5skpArb4RAi3qBz7O26iXgOoTp7SBJqIYbqrBaDtFESvjAy0juDP8A0+cwEbj2Z1YJkZlUGkhqQp2eJkDlGeymeaIEKsC4HxbgYu55ug9bVJLmS42SOG6Sv74UhoOo1iBYOhhURebKDj0wNUGcUbz424czTWCX2ZKCLsc+Qs5yHbnTWFu6OcKmJezaISe7gcASUl2QJ5ECj6UvqqRWA82kz9IO9pmycT01orsvf7PnMrzSkINSNtzF8qJLiWurenqjdQ1mlVk/aP42K3GmqQ03AORvyA2RgYf8vVxNKMWqIhG6WZR5DmLxHjeSbSOCwXE7xcVT
   template:
     metadata:
       annotations:
         reflector.v1.k8s.emberstack.com/reflection-allowed: "true"
-        reflector.v1.k8s.emberstack.com/reflection-allowed-namespaces: cert-manager,external-dns
+        reflector.v1.k8s.emberstack.com/reflection-allowed-namespaces: cert-manager,external-dns,gateway
         reflector.v1.k8s.emberstack.com/reflection-auto-enabled: "true"
-        reflector.v1.k8s.emberstack.com/reflection-auto-namespaces: cert-manager,external-dns
+        reflector.v1.k8s.emberstack.com/reflection-auto-namespaces: cert-manager,external-dns,gateway
       creationTimestamp: null
       name: cloudflare-api-token
       namespace: cert-manager
