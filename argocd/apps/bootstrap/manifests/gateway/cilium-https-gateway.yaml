@@ -17,5 +17,7 @@ spec:
           - kind: Secret
             name: cloudflare-cert
       allowedRoutes:
+        kinds:
+        - kind: HTTPRoute
         namespaces:
           from: All
