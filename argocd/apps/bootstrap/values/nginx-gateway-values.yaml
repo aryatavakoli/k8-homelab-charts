@@ -1,0 +1,3 @@
+nginxGateway:
+  gwAPIExperimentalFeatures:
+    enable: true

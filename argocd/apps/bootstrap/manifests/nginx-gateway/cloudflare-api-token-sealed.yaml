@@ -12,9 +12,9 @@ spec:
     metadata:
       annotations:
         reflector.v1.k8s.emberstack.com/reflection-allowed: "true"
-        reflector.v1.k8s.emberstack.com/reflection-allowed-namespaces: external-dns,gateway
+        reflector.v1.k8s.emberstack.com/reflection-allowed-namespaces: external-dns,nginx-gateway
         reflector.v1.k8s.emberstack.com/reflection-auto-enabled: "true"
-        reflector.v1.k8s.emberstack.com/reflection-auto-namespaces: external-dns,gateway
+        reflector.v1.k8s.emberstack.com/reflection-auto-namespaces: external-dns,nginx-gateway
       creationTimestamp: null
       name: cloudflare-api-token
       namespace: cert-manager
