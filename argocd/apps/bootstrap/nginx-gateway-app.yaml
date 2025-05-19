@@ -12,7 +12,7 @@ spec:
       helm:
         releaseName: nginx-gateway
         valueFiles:
-          - $repo/argocd/apps/bootstrap/values/nginx-gateway-values.yaml
+          - $values/argocd/apps/bootstrap/values/nginx-gateway-values.yaml
     - repoURL: https://github.com/aryatavakoli/k8-homelab-charts
       targetRevision: HEAD
       path: argocd/apps/bootstrap/manifests/nginx-gateway
