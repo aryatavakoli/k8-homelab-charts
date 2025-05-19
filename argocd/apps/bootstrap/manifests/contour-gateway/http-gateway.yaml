@@ -1,12 +1,12 @@
 apiVersion: gateway.networking.k8s.io/v1
 kind: Gateway
 metadata:
-  name: nginx-app-gateway
-  namespace: nginx-gateway
+  name: contour-http-gateway
+  namespace: projectcontour
   annotations:
     cert-manager.io/issuer: cloudflare-letsencrypt-prod
 spec:
-  gatewayClassName: nginx
+  gatewayClassName: contour
   listeners:
     - protocol: HTTPS
       port: 443
@@ -20,13 +20,5 @@ spec:
       allowedRoutes:
         kinds:
         - kind: HTTPRoute
-        namespaces:
-          from: All
-    - protocol: TCP
-      port: 25565
-      name: minecraft-gateway
-      allowedRoutes:
-        kinds:
-        - kind: TCPRoute
         namespaces:
           from: All

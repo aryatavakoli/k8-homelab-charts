@@ -1,0 +1,2 @@
+gatewayAPI:
+  manageCRDs: true

@@ -1,28 +1,27 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: nginx-gateway
+  name: contour-gateway
   namespace: argocd
 spec:
   project: project-bootstrap
   sources:
-    - repoURL: ghcr.io/nginx/charts
-      path: nginx-gateway-fabric
-      chart: nginx-gateway-fabric
-      targetRevision: 1.6.2
+    - repoURL: https://charts.bitnami.com/bitnami 
+      chart: contour
+      targetRevision: 20.0.3
       helm:
-        releaseName: nginx-gateway
+        releaseName: contour
         valueFiles:
-          - $values/argocd/apps/bootstrap/values/nginx-gateway-values.yaml
+          - $values/argocd/apps/bootstrap/values/contour-gateway-values.yaml
     - repoURL: https://github.com/aryatavakoli/k8-homelab-charts
       targetRevision: HEAD
-      path: argocd/apps/bootstrap/manifests/nginx-gateway
+      path: argocd/apps/bootstrap/manifests/contour-gateway
     - repoURL: https://github.com/aryatavakoli/k8-homelab-charts
       targetRevision: HEAD
       ref: values
   destination:
     server: "https://kubernetes.default.svc"
-    namespace: nginx-gateway
+    namespace: projectcontour
   syncPolicy:
     automated:
       allowEmpty: true
