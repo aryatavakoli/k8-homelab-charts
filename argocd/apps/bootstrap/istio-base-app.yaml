@@ -7,7 +7,7 @@ spec:
   project: project-bootstrap
   sources:
     - repoURL: https://istio-release.storage.googleapis.com/charts
-      chart: base
+      chart: istio/base
       targetRevision: 1.2.6
       helm:
         releaseName: istio-base
