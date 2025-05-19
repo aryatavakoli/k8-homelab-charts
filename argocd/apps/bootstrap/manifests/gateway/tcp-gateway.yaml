@@ -1,10 +1,10 @@
 # apiVersion: gateway.networking.k8s.io/v1
 # kind: Gateway
 # metadata:
-#   name: contour-tcp-gateway
-#   namespace: projectcontour
+#   name: istio-tcp-gateway
+#   namespace: gateway
 # spec:
-#   gatewayClassName: contour
+#   gatewayClassName: istio
 #   listeners:
 #     - protocol: TCP
 #       port: 25565

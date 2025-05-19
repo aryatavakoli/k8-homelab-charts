@@ -1,28 +1,24 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: contour-gateway
+  name: istio-cni
   namespace: argocd
 spec:
   project: project-bootstrap
   sources:
-    - repoURL: registry-1.docker.io/bitnamicharts
-      path: contour
-      chart: contour
-      targetRevision: 20.0.3
+    - repoURL: https://istio-release.storage.googleapis.com/charts
+      chart: cni
+      targetRevision: 1.2.6
       helm:
-        releaseName: contour
+        releaseName: istio-cni
         valueFiles:
-          - $values/argocd/apps/bootstrap/values/contour-gateway-values.yaml
-    - repoURL: https://github.com/aryatavakoli/k8-homelab-charts
-      targetRevision: HEAD
-      path: argocd/apps/bootstrap/manifests/contour-gateway
+          - $values/argocd/apps/bootstrap/values/istio-cni-values.yaml
     - repoURL: https://github.com/aryatavakoli/k8-homelab-charts
       targetRevision: HEAD
       ref: values
   destination:
     server: "https://kubernetes.default.svc"
-    namespace: projectcontour
+    namespace: istio-system
   syncPolicy:
     automated:
       allowEmpty: true
