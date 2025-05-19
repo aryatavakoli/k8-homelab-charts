@@ -6,7 +6,8 @@ metadata:
 spec:
   project: project-bootstrap
   sources:
-    - repoURL: https://charts.bitnami.com/bitnami 
+    - repoURL: registry-1.docker.io/bitnamicharts
+      path: contour
       chart: contour
       targetRevision: 20.0.3
       helm:
