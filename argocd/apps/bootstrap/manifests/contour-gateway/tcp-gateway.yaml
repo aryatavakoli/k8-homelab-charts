@@ -1,16 +1,16 @@
-apiVersion: gateway.networking.k8s.io/v1
-kind: Gateway
-metadata:
-  name: contour-tcp-gateway
-  namespace: projectcontour
-spec:
-  gatewayClassName: contour
-  listeners:
-    - protocol: TCP
-      port: 25565
-      name: minecraft-gateway
-      allowedRoutes:
-        kinds:
-        - kind: TCPRoute
-        namespaces:
-          from: All
+# apiVersion: gateway.networking.k8s.io/v1
+# kind: Gateway
+# metadata:
+#   name: contour-tcp-gateway
+#   namespace: projectcontour
+# spec:
+#   gatewayClassName: contour
+#   listeners:
+#     - protocol: TCP
+#       port: 25565
+#       name: minecraft-gateway
+#       allowedRoutes:
+#         kinds:
+#         - kind: TCPRoute
+#         namespaces:
+#           from: All
