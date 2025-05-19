@@ -6,7 +6,7 @@ metadata:
 spec:
   project: project-bootstrap
   sources:
-    - repoURL: oci://ghcr.io/nginx/charts/
+    - repoURL: ghcr.io/nginx/charts/
       path: nginx-gateway-fabric
       chart: nginx-gateway-fabric
       targetRevision: 1.16.2
