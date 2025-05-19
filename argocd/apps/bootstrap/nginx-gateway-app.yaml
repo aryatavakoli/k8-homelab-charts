@@ -9,7 +9,7 @@ spec:
     - repoURL: ghcr.io/nginx/charts
       path: nginx-gateway-fabric
       chart: nginx-gateway-fabric
-      targetRevision: 1.E6.2
+      targetRevision: 1.6.2
       helm:
         releaseName: nginx-gateway
         valueFiles:
