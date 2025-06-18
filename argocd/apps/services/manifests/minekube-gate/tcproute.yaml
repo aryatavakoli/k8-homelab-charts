@@ -5,9 +5,13 @@ metadata:
   namespace: minecraft
 spec:
   parentRefs:
-  - name: tcp-gateway
-    sectionName: minecraft-gateway
+    - group: gateway.networking.k8s.io
+      kind: Gateway
+      name: tcp-gateway
+      namespace: gateway
   rules:
-  - backendRefs:
-    - name: minekube-gate
-      port: 25565
+    - backendRefs:
+        - group: ''
+          kind: Service
+          name: minekube-gate
+          port: 25565

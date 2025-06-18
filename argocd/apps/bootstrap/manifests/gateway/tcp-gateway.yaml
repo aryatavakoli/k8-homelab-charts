@@ -6,11 +6,12 @@ metadata:
 spec:
   gatewayClassName: istio
   listeners:
-    - protocol: TCP
-      port: 25565
-      name: minecraft-gateway
-      allowedRoutes:
+    - allowedRoutes:
         kinds:
-        - kind: TCPRoute
+          - group: gateway.networking.k8s.io
+            kind: TCPRoute
         namespaces:
           from: All
+      name: minecraft-gateway
+      protocol: TCP
+      port: 25565
