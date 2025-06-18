@@ -29,6 +29,6 @@ spec:
       kind: Gateway
   rules:
      - backendRefs:
-        - name: minecraft-vanilla
+        - name: minekube-gate
           namespace: minecraft
           port: 25565
