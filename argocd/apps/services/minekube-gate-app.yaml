@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: minekube-gate
+  namespace: argocd
+spec:
+  project: project-services
+  sources:
+    - repoURL: https://github.com/aryatavakoli/k8-homelab-charts
+      targetRevision: HEAD
+      path: argocd/apps/services/manifests/minekube-gate
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: minecraft
+  syncPolicy:
+    automated:
+      allowEmpty: true
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app.kubernetes.io/name: minekube-gate
+  name: minekube-gate
+  namespace: minecraft
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: minekube-gate
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/component: proxy
+        app.kubernetes.io/name: minekube-gate
+    spec:
+      containers:
+      - image: ghcr.io/minekube/gate:latest
+        name: gate
+        ports:
+        - containerPort: 25565
+          name: minecraft
+        volumeMounts:
+        - mountPath: /config.yml
+          name: config
+          subPath: config.yml
+      volumes:
+      - configMap:
+          name: minekube-gate-configmap
+        name: config
