@@ -7,11 +7,9 @@ data:
     config:
       bind: 0.0.0.0:25565
       servers:
-        server-0: server-0.servers:25565
-        server-1: server-1.servers:25565
+        vanilla: vanilla.svc.cluster.local:25565
       try:
-        - server-0
-        - server-1
+        - vanilla
 kind: ConfigMap
 metadata:
   labels:
