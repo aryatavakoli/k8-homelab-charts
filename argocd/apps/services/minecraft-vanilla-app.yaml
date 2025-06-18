@@ -10,7 +10,7 @@ spec:
       chart: minecraft
       targetRevision: 4.26.3
       helm:
-        releaseName: vanilla
+        releaseName: minecraft-vanilla
         valueFiles:
           - $values/argocd/apps/services/values/minecraft-vanilla-values.yaml
     - repoURL: https://github.com/aryatavakoli/k8-homelab-charts

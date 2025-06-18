@@ -1,2 +1,6 @@
 minecraftServer:
   eula: true
+nameOverride: "vanilla"
+fullnameOverride: "vanilla"
+serviceAnnotation:
+  external-dns.alpha.kubernetes.io/hostname: mc.aryat.io
