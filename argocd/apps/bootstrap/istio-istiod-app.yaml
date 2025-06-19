@@ -20,6 +20,9 @@ spec:
     server: "https://kubernetes.default.svc"
     namespace: istio-system
   syncPolicy:
+    managedNamespaceMetadata:
+      labels:
+        pod-security.kubernetes.io/enforce: privileged
     automated:
       allowEmpty: true
       prune: true
