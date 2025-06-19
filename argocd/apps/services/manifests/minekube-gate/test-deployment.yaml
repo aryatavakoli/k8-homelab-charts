@@ -20,7 +20,7 @@ spec:
       containers:
       - env:
         - name: TYPE
-          value: PUFFERFISH
+          value: PAPER
         - name: EULA
           value: "TRUE"
         - name: ONLINE_MODE
