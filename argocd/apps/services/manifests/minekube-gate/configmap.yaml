@@ -7,8 +7,7 @@ data:
     config:
       bind: 0.0.0.0:25565
       servers:
-        vanillia: server-0.servers:25565
-        # vanilla: minecraft-vanilla.minecraft.svc.cluster.local:25565
+        vanilla: minecraft-vanilla.minecraft.svc.cluster.local:25565
       try:
         - vanilla
 kind: ConfigMap
