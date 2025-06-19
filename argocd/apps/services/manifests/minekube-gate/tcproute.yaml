@@ -3,6 +3,7 @@ kind: TCPRoute
 metadata:
   annotations:
     external-dns.alpha.kubernetes.io/hostname: gate.aryat.io
+    external-dns.alpha.kubernetes.io/endpoints-type: HostIP
   name: minekube-gate
   namespace: minecraft
 spec:
