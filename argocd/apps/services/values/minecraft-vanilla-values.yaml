@@ -1,5 +1,4 @@
 minecraftServer:
   eula: true
-  type: "PAPER"
 serviceAnnotations:
   external-dns.alpha.kubernetes.io/hostname: mc.aryat.io
