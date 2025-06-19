@@ -1,1 +1,2 @@
----
+helmPreUpgradeCheckerJob:
+  enbaled: false
