@@ -14,4 +14,3 @@ spec:
     targetPort: minecraft
   selector:
     app: minekube-gate
-  type: ClusterIP
