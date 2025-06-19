@@ -1,5 +1,5 @@
 minecraftServer:
   eula: true
+  clusterIP: None
 serviceAnnotations:
   external-dns.alpha.kubernetes.io/hostname: mc.aryat.io
-  external-dns.alpha.kubernetes.io/cloudflare-proxied: "true"
