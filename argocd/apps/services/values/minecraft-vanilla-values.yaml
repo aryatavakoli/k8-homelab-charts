@@ -4,6 +4,7 @@ minecraftServer:
 persistence:
   dataDir: 
     enabled: true
+  storageClass: "proxmox-csi"
 serviceAnnotations:
   external-dns.alpha.kubernetes.io/hostname: mc.aryat.io
   external-dns.alpha.kubernetes.io/target: dynamic.aryat.io
