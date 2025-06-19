@@ -21,7 +21,8 @@ spec:
     namespace: longhorn-system
   syncPolicy:
     managedNamespaceMetadata:
-      pod-security.kubernetes.io/enforce: privileged
+      labels:
+        pod-security.kubernetes.io/enforce: privileged
     automated:
       allowEmpty: true
       prune: true
