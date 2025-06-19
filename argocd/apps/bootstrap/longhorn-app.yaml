@@ -20,6 +20,8 @@ spec:
     server: "https://kubernetes.default.svc"
     namespace: longhorn-system
   syncPolicy:
+    managedNamespaceMetadata:
+      pod-security.kubernetes.io/enforce: privileged
     automated:
       allowEmpty: true
       prune: true
