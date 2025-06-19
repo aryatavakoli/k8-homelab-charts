@@ -1,6 +1,9 @@
 apiVersion: gateway.networking.k8s.io/v1alpha2
 kind: TCPRoute
 metadata:
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: gate.aryat.io
+    external-dns.alpha.kubernetes.io/cloudflare-proxied: "true"
   name: minekube-gate
   namespace: minecraft
 spec:
