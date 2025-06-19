@@ -1,6 +1,10 @@
 minecraftServer:
   eula: true
   clusterIP: None
+persistence:
+  dataDir: enabled
+  storageClass: "proxmox-csi"
+  altDataVolumeName: "pv-minecraft"
 serviceAnnotations:
   external-dns.alpha.kubernetes.io/hostname: mc.aryat.io
   external-dns.alpha.kubernetes.io/target: dynamic.aryat.io
