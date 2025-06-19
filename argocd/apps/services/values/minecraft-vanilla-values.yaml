@@ -2,7 +2,8 @@ minecraftServer:
   eula: true
   clusterIP: None
 persistence:
-  dataDir: enabled
+  dataDir: 
+    enabled: true
   storageClass: "proxmox-csi"
   altDataVolumeName: "pv-minecraft"
 serviceAnnotations:
