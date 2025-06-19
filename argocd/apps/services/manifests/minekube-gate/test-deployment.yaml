@@ -1,0 +1,56 @@
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  labels:
+    app: gate
+  name: server
+  namespace: minecraft
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: gate
+  serviceName: servers
+  template:
+    metadata:
+      labels:
+        app: gate
+    spec:
+      containers:
+      - env:
+        - name: TYPE
+          value: PUFFERFISH
+        - name: EULA
+          value: "TRUE"
+        - name: ONLINE_MODE
+          value: "FALSE"
+        image: itzg/minecraft-server:latest
+        livenessProbe:
+          exec:
+            command:
+            - mc-health
+          initialDelaySeconds: 120
+          periodSeconds: 60
+        name: server1
+        ports:
+        - containerPort: 25565
+          name: minecraft
+        readinessProbe:
+          exec:
+            command:
+            - mc-health
+          failureThreshold: 12
+          initialDelaySeconds: 20
+          periodSeconds: 10
+        stdin: true
+        tty: true
+        volumeMounts:
+        - mountPath: /data/spigot.yml
+          name: spigot
+          readOnly: false
+          subPath: spigot.yml
+      volumes:
+      - configMap:
+          name: spigot
+        name: spigot
