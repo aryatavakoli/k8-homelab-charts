@@ -1,28 +1,25 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: rook-ceph
+  name: longhorn
   namespace: argocd
 spec:
   project: project-bootstrap
   sources:
-    - repoURL: https://charts.rook.io/release 
-      chart: rook-ceph
-      targetRevision: 1.17.4
+    - repoURL: https://charts.longhorn.io
+      chart: longhorn
+      targetRevision: 1.9.0
       helm:
-        releaseName: rook-ceph
+        releaseName: longhorn
         valueFiles:
-          - $values/argocd/apps/bootstrap/values/rook-ceph-values.yaml
+          - $values/argocd/apps/bootstrap/values/longhorn-values.yaml
     - repoURL: https://github.com/aryatavakoli/k8-homelab-charts
       targetRevision: HEAD
       ref: values
   destination:
     server: "https://kubernetes.default.svc"
-    namespace: rook-ceph
+    namespace: longhorn
   syncPolicy:
-    managedNamespaceMetadata:
-      labels: 
-        pod-security.kubernetes.io/enforce: privileged
     automated:
       allowEmpty: true
       prune: true
