@@ -1,6 +1,4 @@
 provider: 
-  name: cloudflare
-policy: sync
 env:
   - name: CF_API_TOKEN
     valueFrom:
@@ -15,3 +13,4 @@ sources:
   - gateway-tcproute
   - gateway-udproute
   - istio-gateway
+  - istio-virtualservice
