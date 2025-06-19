@@ -3,6 +3,7 @@ kind: Service
 metadata:
   annotations:
     external-dns.alpha.kubernetes.io/hostname: gate.aryat.io
+    external-dns.alpha.kubernetes.io/cloudflare-proxied: "true"
   name: minekube-gate
   namespace: minecraft
 spec:
