@@ -1,6 +1,10 @@
 minecraftServer:
   eula: true
   clusterIP: None
+persistence:
+  dataDir: 
+    enabled: true
+  storageClass: "longhorn"
 serviceAnnotations:
   external-dns.alpha.kubernetes.io/hostname: mcm.aryat.io
   external-dns.alpha.kubernetes.io/target: dynamic.aryat.io
