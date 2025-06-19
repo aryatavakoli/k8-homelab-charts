@@ -45,11 +45,6 @@ spec:
           periodSeconds: 10
         stdin: true
         tty: true
-        volumeMounts:
-        - mountPath: /data/spigot.yml
-          name: spigot
-          readOnly: false
-          subPath: spigot.yml
       volumes:
       - configMap:
           name: spigot
