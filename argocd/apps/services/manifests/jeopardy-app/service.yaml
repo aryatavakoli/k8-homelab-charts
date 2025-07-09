@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: jeopardy-app
+  namespace: jeopardy-app
+spec:
+  ports:
+  - name: jeopardy-app
+    port: 3000
+    protocol: HTTP
+    targetPort: jeopardy-app
+  selector:
+    app: jeopardy-app

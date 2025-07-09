@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jeopardy-app
+  namespace: jeopardy-app
+spec:
+  selector:
+    matchLabels:
+      app: jeopardy-app
+  template:
+    metadata:
+      labels:
+        app: jeopardy-app
+    spec:
+      containers:
+      - image: ghcr.io/harrywc-git/jeopardy:latest
+        name: jeopardy-app
+        ports:
+        - containerPort: 3000
+          name: jeopardy-app
