@@ -7,6 +7,7 @@ metadata:
   name: jeopardy-app
   namespace: jeopardy-app
 spec:
+  clusterIP: None
   ports:
   - name: jeopardy-app
     port: 3000
