@@ -1,4 +1,3 @@
-policy: sync
 provider: 
   name: cloudflare
 env:
