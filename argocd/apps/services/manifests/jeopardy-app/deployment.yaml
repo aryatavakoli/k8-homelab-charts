@@ -13,7 +13,7 @@ spec:
         app: jeopardy-app
     spec:
       containers:
-      - image: ghcr.io/harrywc-git/jeopardy:main
+      - image: ghcr.io/harrywc-git/jeopardy-button:main
         name: jeopardy-app
         ports:
         - containerPort: 3000
