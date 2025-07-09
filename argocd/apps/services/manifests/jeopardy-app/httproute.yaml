@@ -1,9 +1,6 @@
 apiVersion: gateway.networking.k8s.io/v1
 kind: HTTPRoute
 metadata:
-  annotations:
-    external-dns.alpha.kubernetes.io/hostname: jeopardy.aryat.io
-    external-dns.alpha.kubernetes.io/target: dynamic.aryat.io
   name: jeopardy-app
   namespace: jeopardy-app
 spec:
