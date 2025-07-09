@@ -1,0 +1,20 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: jeopardy.aryat.io
+    external-dns.alpha.kubernetes.io/target: dynamic.aryat.io
+  name: jeopardy-app
+  namespace: jeopardy-app
+spec:
+  parentRefs:
+    - name: http-gateway
+      sectionName: https-gateway
+      namespace: gateway
+      kind: Gateway
+  hostnames: ["jeopardy.aryat.io"]
+  rules:
+     - backendRefs:
+        - name: jeopardy-app
+          namespace: jeopardy-app
+          port: 3000
