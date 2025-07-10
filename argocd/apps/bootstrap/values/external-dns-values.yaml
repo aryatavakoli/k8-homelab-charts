@@ -10,8 +10,8 @@ env:
 sources:
   - service
   - ingress
-  - gateway-httproute
-  - gateway-tlsroute
+  #- gateway-httproute
+  #- gateway-tlsroute
   - gateway-tcproute
   - gateway-udproute
   - istio-gateway
