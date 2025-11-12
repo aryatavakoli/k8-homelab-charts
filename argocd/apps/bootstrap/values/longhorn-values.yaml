@@ -1,7 +1,7 @@
 preUpgradeChecker:
   jobEnabled: false
 defaultSettings:
-  defaultReplicaCount: 1
+  defaultReplicaCount: "1"
 persistence:
   reclaimPolicy: Retain
-  defaultClassReplicaCount: 1
+  defaultClassReplicaCount: "1"
