@@ -1,5 +1,13 @@
 minecraftServer:
   eula: true
+  whitelist:
+    - Sugogi
+    - Bigggrice
+    - Meeko__
+    - Kath_potato
+    - spalexma
+    - Guojiaxi
+    - fuzzywuzzy2233
   clusterIP: None
 persistence:
   dataDir: 

@@ -10,8 +10,8 @@ data:
         routes:
           - host: 'mc.aryat.io'
             backend: minecraft-vanilla.minecraft.svc.cluster.local:25565
-          - host: 'mcm.aryat.io'
-            backend: minecraft-modded.minecraft.svc.cluster.local:25565
+          # - host: 'mcm.aryat.io'
+          #   backend: minecraft-modded.minecraft.svc.cluster.local:25565
 kind: ConfigMap
 metadata:
   labels:
