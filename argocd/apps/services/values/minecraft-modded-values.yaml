@@ -4,6 +4,7 @@ minecraftServer:
 persistence:
   dataDir: 
     enabled: true
+    Size: 7Gi
   storageClass: "longhorn"
 serviceAnnotations:
   external-dns.alpha.kubernetes.io/hostname: mcm.aryat.io
