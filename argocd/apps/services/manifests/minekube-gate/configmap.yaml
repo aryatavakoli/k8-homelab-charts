@@ -5,11 +5,13 @@ data:
     # settings are omitted and will be set by default.
     # See config.yml for the full configuration options.
     config:
+      onlineMode: true
       lite:
         enabled: true
         routes:
           - host: 'mc.aryat.io'
             backend: minecraft-vanilla.minecraft.svc.cluster.local:25565
+            modifyVirtualHost: true
 kind: ConfigMap
 metadata:
   labels:
