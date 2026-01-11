@@ -1,5 +1,5 @@
 image:
-  tag: java21
+  tag: multiarch-java21
 minecraftServer:
   eula: true
   type: "FTBA"
@@ -17,3 +17,4 @@ persistence:
 serviceAnnotations:
   external-dns.alpha.kubernetes.io/hostname: mcm.aryat.io
   external-dns.alpha.kubernetes.io/target: dynamic.aryat.io
+livenessProbe: {}
