@@ -12,6 +12,9 @@ data:
           - host: 'mc.aryat.io'
             backend: minecraft-vanilla.minecraft.svc.cluster.local:25565
             modifyVirtualHost: true
+          - host: 'mcm.aryat.io'
+            backend: minecraft-modded.minecraft.svc.cluster.local:25565
+            modifyVirtualHost: true
 kind: ConfigMap
 metadata:
   labels:
