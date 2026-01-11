@@ -1,5 +1,5 @@
 image:
-  tag: multiarch-java21
+  tag: java21
 minecraftServer:
   eula: true
   type: "FTBA"
