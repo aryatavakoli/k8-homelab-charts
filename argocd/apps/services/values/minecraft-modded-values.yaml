@@ -1,8 +1,8 @@
 minecraftServer:
   eula: true
   type: "FTBA"
-  ftbModpackId: "25"
-  ftbModpackVersionId: "123"
+  ftbModpackId: "129"
+  ftbModpackVersionId: "100168"
   whitelist: "Sugogi,Bigggrice,Meeko__,Kath_potato,spalexma,Guojiaxi,fuzzywuzzy2233,foxrally,aleony14,japer111"
   clusterIP: None
   motd: "Welcome to Arya's Modded Minecraft Server!"
