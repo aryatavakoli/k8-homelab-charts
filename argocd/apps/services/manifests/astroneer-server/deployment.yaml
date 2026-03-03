@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: astroneer-server
+  namespace: astroneer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: astroneer-server
+  template:
+    metadata:
+      labels:
+        app: astroneer-server
+    spec:
+      containers:
+      - image: ghcr.io/birdhimself/astroneer-server:latest
+        name: astroneer
+        ports:
+        - containerPort: 7777
+          protocol: UDP
+          name: astroneer-server
+        env:
+        - name: DEBUG
+          value: "false"
+        - name: DISABLE_ENCRYPTION
+          value: "false"
+        - name: CREATE_LAUNCHER_CONFIG
+          value: "true"
+        - name: FORCE_CHOWN
+          value: "false"
+        volumeMounts:
+        - name: saves
+          mountPath: /astrotux/AstroneerServer/Astro/Saved
+        stdin: true
+        tty: true
+        resources:
+          requests:
+            memory: "1Gi"
+            cpu: "500m"
+          limits:
+            memory: "2Gi"
+            cpu: "1000m"
+      volumes:
+      - name: saves
+        persistentVolumeClaim:
+          claimName: astroneer-saves

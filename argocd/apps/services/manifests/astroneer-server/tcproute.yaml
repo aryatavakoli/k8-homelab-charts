@@ -1,0 +1,16 @@
+apiVersion: gateway.networking.k8s.io/v1alpha2
+kind: TCPRoute
+metadata:
+  name: astroneer-server
+  namespace: astroneer
+spec:
+  parentRefs:
+    - name: tcp-gateway
+      sectionName: astroneer-gateway
+      namespace: gateway
+      kind: Gateway
+  rules:
+    - backendRefs:
+      - name: astroneer-server
+        namespace: astroneer
+        port: 7777

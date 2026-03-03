@@ -11,7 +11,22 @@ spec:
           - group: gateway.networking.k8s.io
             kind: TCPRoute
         namespaces:
-          from: All
+          from: Selector
+          selector:
+            matchLabels:
+              name: minecraft
       name: minecraft-gateway
       protocol: TCP
       port: 25565
+    - allowedRoutes:
+        kinds:
+          - group: gateway.networking.k8s.io
+            kind: TCPRoute
+        namespaces:
+          from: Selector
+          selector:
+            matchLabels:
+              name: astroneer
+      name: astroneer-gateway
+      protocol: TCP
+      port: 7777
